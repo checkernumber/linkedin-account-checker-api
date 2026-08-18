@@ -1,0 +1,26 @@
+# CheckNumber LinkedIn Account Checker API
+> Official integration context generated from the checked API expansion manifest.
+
+## Canonical resources
+- [linkedin_phone](https://docs.checknumber.ai/linkedin-number-checker)
+- [linkedin](https://docs.checknumber.ai/linkedin-email-checker)
+- [linkedin_profile](https://docs.checknumber.ai/linkedin-profile-checker)
+
+## Contract facts
+- API base URL: https://api.checknumber.ai
+- Authentication: `X-API-Key` request header
+- API key environment variable: `CHECKNUMBER_API_KEY`
+- Processing mode: async_bulk
+- Current prices are not embedded; use the official pricing page.
+
+## Products
+- `linkedin_phone`: Number Checker · input `phone` · fields: number, activated
+- `linkedin`: Email Checker · input `email` · fields: email, activated
+- `linkedin_profile`: Email Profile Checker · input `email` · fields: email, activated, country, gender, industry, job_title, inferred_salary
+
+## Safety
+- Process only identifiers you are authorized to verify.
+- Do not expose API keys in browser code or commit secrets.
+- An undetermined result is not a confirmed negative.
+
+Last reviewed: 2026-08-18.

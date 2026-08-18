@@ -1,0 +1,81 @@
+{
+  "name": "LinkedIn Account Checker API",
+  "brand": "CheckNumber",
+  "slug": "linkedin-account-checker-api",
+  "repository": "checkernumber/linkedin-account-checker-api",
+  "description": "Asynchronous file-based LinkedIn checks.",
+  "official_site": "https://checknumber.ai",
+  "landing_page": "https://checknumber.ai/products/linkedin",
+  "canonical_docs": "https://docs.checknumber.ai/linkedin-number-checker",
+  "dashboard": "https://platform.checknumber.ai",
+  "base_url": "https://api.checknumber.ai",
+  "mode": "async",
+  "auth": {
+    "type": "api_key",
+    "header": "X-API-Key"
+  },
+  "endpoints": {
+    "create_task": {
+      "method": "POST",
+      "path": "/v1/tasks"
+    },
+    "get_task": {
+      "method": "POST",
+      "path": "/v1/gettasks"
+    },
+    "balance": {
+      "method": "GET",
+      "path": "/v1/balance"
+    }
+  },
+  "input": {
+    "file_format": "text file, one phone number, email address, or username according to service_type per line according to task type"
+  },
+  "products": [
+    {
+      "task_type": "linkedin_phone",
+      "name": "Number Checker",
+      "doc_slug": "linkedin-number-checker",
+      "input_kind": "phone",
+      "min_numbers": 1000,
+      "max_numbers": 500000,
+      "result_fields": [
+        "number",
+        "activated"
+      ]
+    },
+    {
+      "task_type": "linkedin",
+      "name": "Email Checker",
+      "doc_slug": "linkedin-email-checker",
+      "input_kind": "email",
+      "min_numbers": 1000,
+      "max_numbers": 10000000,
+      "result_fields": [
+        "email",
+        "activated"
+      ]
+    },
+    {
+      "task_type": "linkedin_profile",
+      "name": "Email Profile Checker",
+      "doc_slug": "linkedin-profile-checker",
+      "input_kind": "email",
+      "min_numbers": 1000,
+      "max_numbers": 10000000,
+      "result_fields": [
+        "email",
+        "activated",
+        "country",
+        "gender",
+        "industry",
+        "job_title",
+        "inferred_salary"
+      ]
+    }
+  ],
+  "pricing_url": "https://checknumber.ai/pricing",
+  "maintainer": "CheckNumber",
+  "license": "MIT",
+  "last_reviewed": "2026-08-18"
+}
